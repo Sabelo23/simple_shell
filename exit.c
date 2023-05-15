@@ -43,7 +43,7 @@ int __exit(char **str, list_t *env, int num, char **command)
 
 	if (e_value == -1)
 	{
-	
+
 	illegal_number(str[1], num, env);
 	free_double_ptr(str);
 	return (2);

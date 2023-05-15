@@ -27,4 +27,8 @@ void free_double_ptr(char **str);
 void free_linked_list(list_t *list);
 void not_found(char *str, int num, list_t *env);
 char *which(char *str, list_t *env);
+char *get_env(char *str, list_t *env);
+int find_env(list_t *env, char *str);
+int _unsetenv(list_t **env, char **str);
+int _setenv(list_t **env, char **str);
 #endif

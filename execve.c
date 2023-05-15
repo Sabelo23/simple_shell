@@ -61,3 +61,38 @@ int _execve(char **s, list_t *env, int num)
 	}
 	return (0);
 }
+
+
+/**
+ * env_linked_list - function that creates linked lists
+ * env: input environmental variables
+ *
+ * Return: linked list
+ */
+list_t *env_linked_list(char **env)
+{
+	list_t *head;
+	int i = 0;
+
+	head = NULL;
+	while (env[i] != NULL)
+	{
+		add_end_node(&head, env[i]);
+		i++;
+	}
+	return (head);
+}
+
+/**
+ * _env - function that prints env variables
+ * @str: input value
+ * @env: env variables
+ *
+ * Return: 0 on success
+ */
+int _env(char **str, list_t *env)
+{
+	free_double_ptr(str);
+	print_list(env);
+	return (0);
+}
