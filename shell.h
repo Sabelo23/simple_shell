@@ -33,4 +33,5 @@ int _unsetenv(list_t **env, char **str);
 int _setenv(list_t **env, char **str);
 int _env(char **str, list_t *env);
 list_t *env_linked_list(char **env);
+int __exit(char **s, list_t *env, int num, char **command);
 #endif

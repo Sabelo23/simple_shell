@@ -25,8 +25,7 @@ int c_atoi(char *s)
 }
 
 /**
- * __exit - a function that frees user input and after exits main program with
- * - a value
+ * __exit - a function that frees user input and exits main program
  * @str: A command from the user on shell
  * @env: An environmental variable to free error
  * @num: A nth user command line input to print in error msg
@@ -39,18 +38,17 @@ int __exit(char **str, list_t *env, int num, char **command)
 	int e_value = 0;
 
 	if (str[1] != NULL)
-	e_value = c_atoi(str[1]);
+		e_value = c_atoi(str[1]);
 
 	if (e_value == -1)
 	{
-
-	illegal_number(str[1], num, env);
-	free_double_ptr(str);
-	return (2);
+		illegal_number(str[1], num, env);
+		free_double_ptr(str);
+		return (2);
 	}
 	free_double_ptr(str);
 	free_linked_list(env);
 	if (command != NULL)
-	free_double_ptr(command);
+		free_double_ptr(command);
 	exit(e_value);
 }
