@@ -65,7 +65,7 @@ int _execve(char **s, list_t *env, int num)
 
 /**
  * env_linked_list - function that creates linked lists
- * env: input environmental variables
+ * @env: input environmental variables
  *
  * Return: linked list
  */

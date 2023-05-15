@@ -90,7 +90,7 @@ int find_env(list_t *env, char *str)
  *
  * Return: 0 on success
  */
-int _unsetev(list_t **env, char **str)
+int _unsetenv(list_t **env, char **str)
 {
 	int index = 0, j = 0;
 
