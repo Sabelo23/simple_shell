@@ -34,4 +34,9 @@ int _setenv(list_t **env, char **str);
 int _env(char **str, list_t *env);
 list_t *env_linked_list(char **env);
 int __exit(char **s, list_t *env, int num, char **command);
+void *_realloc(void *ptr, unsigned int old_size, unsigned int new_size);
+int c_atoi(char *s);
+int __exit(char **str, list_t *env, int num, char **command);
+size_t get_line(char **str);
+
 #endif
