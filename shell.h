@@ -39,5 +39,8 @@ int c_atoi(char *s);
 int __exit(char **str, list_t *env, int num, char **command);
 size_t get_line(char **str);
 char *_strcat(char *dest, char *src);
+char *_strcpy(char *dest, char *src);
+char *_strdup(char *str);
+int _strcmp(char *s1, char *s2);
 
 #endif
