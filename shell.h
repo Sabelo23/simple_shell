@@ -26,7 +26,7 @@ typedef struct list
 void free_double_ptr(char **str);
 void free_linked_list(list_t *list);
 void not_found(char *str, int num, list_t *env);
-char *which(char *str, list_t *env);
+char *_which(char *str, list_t *env);
 char *get_env(char *str, list_t *env);
 int find_env(list_t *env, char *str);
 int _unsetenv(list_t **env, char **str);
@@ -38,5 +38,6 @@ void *_realloc(void *ptr, unsigned int old_size, unsigned int new_size);
 int c_atoi(char *s);
 int __exit(char **str, list_t *env, int num, char **command);
 size_t get_line(char **str);
+char *_strcat(char *dest, char *src);
 
 #endif

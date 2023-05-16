@@ -67,30 +67,29 @@ void *_realloc(void *ptr, unsigned int old_size, unsigned int new_size)
 
 	if (new_size == 0 && ptr != NULL)
 	{
-	free(ptr);
-	return (NULL);
+		free(ptr);
+		return (NULL);
 	}
 
 	if (new_size == old_size)
-	return (ptr);
+		return (ptr);
 
 	if (ptr == NULL)
 	{
-	p = malloc(new_size);
-	if (p == NULL)
-	return (NULL);
-	else
-		return (p);
+		p = malloc(new_size);
+		if (p == NULL)
+			return (NULL);
+		else
+			return (p);
 	}
 
 	p = malloc(new_size);
 	if (p == NULL)
-	return (NULL);
+		return (NULL);
 
 	for (i = 0; i < old_size && i < new_size; i++)
 		*((char *)p + i) = *((char *)ptr + i);
 	free(ptr);
-
 	return (p);
 }
 
@@ -107,32 +106,32 @@ size_t get_line(char **str)
 
 	while (t2 == 0 && (i = read(STDIN_FILENO, buff, 1024 - 1)))
 	{
-	if (i == -1)
-	return (-1);
+		if (i == -1)
+			return (-1);
 
-	buff[i] = '\0';
-	n = 0;
-	while (buff[n] != '\0')
-	{
+		buff[i] = '\0';
+		n = 0;
+		while (buff[n] != '\0')
 
-	if (buff[n] == '\n')
-	t2 = 1;
-	n++;
-	}
+		{
+			if (buff[n] == '\n')
+				t2 = 1;
+			n++;
+		}
+		if (t == 0)
 
-	if (t == 0)
-	{
-	i++;
-	*str = malloc(sizeof(char) * i);
-	*str = _strcpy(*str, buff);
-	size = i;
-	t = 1;
-	}
-	else
-	{
-	size += i;
-	*str = _strcat(*str, buff);
-	}
+		{
+			i++;
+			*str = malloc(sizeof(char) * i);
+			*str = _strcpy(*str, buff);
+			size = i;
+			t = 1;
+		}
+		else
+		{
+			size += i;
+			*str = _strcat(*str, buff);
+		}
 	}
 	return (size);
 }
