@@ -106,3 +106,20 @@ char **_str_tok(char *str, char *delm)
 	toks[p] = NULL;
 	return (toks);
 }
+
+/**
+ * free_double_ptr - A funtion that frees malloced array
+ * @str: Is the array of strings
+ */
+
+void free_double_ptr(char **str)
+{
+	int i = 0;
+
+	while (str[i] != NULL)
+	{
+	free(str[i]);
+	i++;
+	}
+	free(str);
+}
