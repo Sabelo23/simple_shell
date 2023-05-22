@@ -108,8 +108,8 @@ char **_str_tok(char *str, char *delm)
 }
 
 /**
- * free_double_ptr - A funtion that frees malloced array
- * @str: Is the array of strings
+ * free_double_ptr - The function that free malloced arrays
+ * @str: The array of strings
  */
 
 void free_double_ptr(char **str)
@@ -118,8 +118,8 @@ void free_double_ptr(char **str)
 
 	while (str[i] != NULL)
 	{
-		free(str[i]);
-		i++;
+	free(str[i]);
+	i++;
 	}
 	free(str);
 }
