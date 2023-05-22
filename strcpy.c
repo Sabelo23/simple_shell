@@ -33,7 +33,7 @@ char *_strdup(char *str)
 	int i, len = 0;
 
 	if (str == NULL)
-		return (NULL);
+	return (NULL);
 
 	while (*(str + len))
 		len++;
@@ -64,9 +64,10 @@ int _strcmp(char *s1, char *s2)
 	int i = 0;
 
 	while (*(s1 + i) == *(s2 + i) && *(s1 + i))
-		i++;
+	i++;
 	if (*(s2 + i))
-		return (*(s2 + i) - *(s2 + i));
+
+	return (*(s2 + i) - *(s2 + i));
 	else
 		return (0);
 }

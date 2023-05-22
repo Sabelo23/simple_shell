@@ -29,7 +29,7 @@ int t_strlen(char *str, int pos, char delm)
  */
 int t_size(char *str, char delm)
 {
-	int = 0, num_delm = 0;
+	int i = 0, num_delm = 0;
 
 	while (str[i] != '\0')
 	{
@@ -105,4 +105,21 @@ char **_str_tok(char *str, char *delm)
 	p++;
 	toks[p] = NULL;
 	return (toks);
+}
+
+/**
+ * free_double_ptr - A funtion that frees malloced array
+ * @str: Is the array of strings
+ */
+
+void free_double_ptr(char **str)
+{
+	int i = 0;
+
+	while (str[i] != NULL)
+	{
+	free(str[i]);
+	i++;
+	}
+	free(str);
 }
