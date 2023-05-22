@@ -43,5 +43,6 @@ char *_strcpy(char *dest, char *src);
 char *_strdup(char *str);
 int _strcmp(char *s1, char *s2);
 int c_t_size(char *str, char delm);
+int _cd(char **str, list_t *env, int num);
 
 #endif

@@ -74,3 +74,37 @@ char *_strcat(char *dest, char *src)
 
 	return (dest);
 }
+
+/**
+ * env_linked_list - func that creates linked lists from environmental variable
+ * @env: environmental variables
+ *
+ * Return: it returns a linked list
+ */
+list_t *env_linked_list(char **env)
+{
+	list_t *head;
+	int i = 0;
+
+	head = NULL;
+	while (env[i] != NULL)
+	{
+		add_end_node(&head, env[i]);
+		i++;
+	}
+	return (head);
+}
+
+/**
+ * _env - a fuction that prints environmental variables
+ * @str: input value
+ * @env: environmental variables
+ *
+ * Return: 0 on success
+ */
+int _env(char **str, list_t *env)
+{
+	free_double_ptr(str);
+	print_list(env);
+	return (0);
+}
