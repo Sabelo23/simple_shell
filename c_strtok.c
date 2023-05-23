@@ -13,11 +13,11 @@ int c_t_size(char *str, char delm)
 
 	while (str[i] != '\0')
 	{
-	if (str[i] == delm)
-	{
-	num_delm++;
-	}
-	i++;
+		if (str[i] == delm)
+		{
+			num_delm++;
+		}
+		i++;
 	}
 	return (num_delm);
 }
@@ -39,27 +39,26 @@ char **c_str_tok(char *str, char *delm)
 	buffsize = c_t_size(str, d_ch);
 	toks = malloc(sizeof(char *) * (buffsize + 2));
 	if (toks == NULL)
-	return (NULL);
+		return (NULL);
 
 	while (str[se] != '\0')
-	se++;
+		se++;
 	while (si < se)
 	{
-	len = t_strlen(str, si, d_ch);
-	toks[p] = malloc(sizeof(char) * (len + 1));
-	if (toks[p] == NULL)
-	return (NULL);
-	i = 0;
-	while ((str[si] != d_ch) &&
-		(str[si] != '\0'))
-	{
-	toks[p][i] = str[si];
-	i++;
-	si++;
-	}
-	toks[p][i] = '\0';
-	p++;
-	si++;
+		len = t_strlen(str, si, d_ch);
+		toks[p] = malloc(sizeof(char) * (len + 1));
+		if (toks[p] == NULL)
+			return (NULL);
+		i = 0;
+		while ((str[si] != d_ch) && (str[si] != '\0'))
+		{
+			toks[p][i] = str[si];
+			i++;
+			si++;
+		}
+		toks[p][i] = '\0';
+		p++;
+		si++;
 	}
 	toks[p] = NULL;
 	return (toks);

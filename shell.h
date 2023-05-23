@@ -44,5 +44,7 @@ char *_strdup(char *str);
 int _strcmp(char *s1, char *s2);
 int c_t_size(char *str, char delm);
 int _cd(char **str, list_t *env, int num);
+void non_interactive(list_t *env);
+char **_str_tok(char *str, char *delm)
 
 #endif
