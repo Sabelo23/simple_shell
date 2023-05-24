@@ -60,5 +60,7 @@ int built_in(char **token, list_t *env, int num, char **command);
 int delete_nodeint_at_index(list_t **head, int index);
 int _execve(char *argv[], list_t *env, int num);
 void not_found(char *str, int num, list_t *env);
+int numlen(int n);
+char *int_to_string(int number);
 
 #endif
