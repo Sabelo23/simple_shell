@@ -10,7 +10,7 @@ void ctrl_c(int n)
 }
 
 /**
- * built_in - a function that handles builtins
+ * built_int - a function that handles builtins
  * @token: input value
  * @env: environmental variable
  * @num: input value
@@ -104,7 +104,8 @@ int prompt(char **en)
 		else
 			non_interactive(env);
 		signal(SIGINT, ctrl_c);
-		command = NULL; i = 0;
+		command = NULL;
+		i = 0;
 		i = get_line(&command);
 		ctrl_D(i, command, env);
 		n_command = command;
@@ -115,9 +116,12 @@ int prompt(char **en)
 		command[n] = '\0';
 		if (command[0] == '\0')
 		{
-			free(n_command); continue;
+
+			free(n_command);
+			continue;
 		}
-		token = NULL; token = _str_tok(command, " ");
+		token = NULL;
+		token = _str_tok(command, " ");
 		if (n_command != NULL)
 			free(n_command);
 		exit_stat = built_in(token, env, command_line_no, NULL);
