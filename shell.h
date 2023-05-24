@@ -52,5 +52,6 @@ char **c_str_tok(char *str, char *delm);
 list_t *add_end_node(list_t **head, char *str);
 size_t print_list(list_t *h);
 void cant_cd_to(char *str, int c_n, list_t *env);
-
+int t_strlen(char *str, int pos, char delm);
+char *ignore_space(char *str);
 #endif
