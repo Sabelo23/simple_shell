@@ -36,7 +36,6 @@ int _unsetenv(list_t **env, char **str);
 int _setenv(list_t **env, char **str);
 int _env(char **str, list_t *env);
 list_t *env_linked_list(char **env);
-int __exit(char **s, list_t *env, int num, char **command);
 void *_realloc(void *ptr, unsigned int old_size, unsigned int new_size);
 int c_atoi(char *s);
 int __exit(char **str, list_t *env, int num, char **command);
@@ -52,5 +51,6 @@ char **_str_tok(char *str, char *delm);
 char **c_str_tok(char *str, char *delm);
 list_t *add_end_node(list_t **head, char *str);
 size_t print_list(list_t *h);
+void cant_cd_to(char *str, int c_n, list_t *env);
 
 #endif
