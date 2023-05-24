@@ -60,6 +60,7 @@ int __exit(char **str, list_t *env, int num, char **command)
  * @new_size: A new size to re-allocate
  * Return: A pointer to re-alloate memory
  */
+
 void *_realloc(void *ptr, unsigned int old_size, unsigned int new_size)
 {
 	void *p;
@@ -134,3 +135,4 @@ size_t get_line(char **str)
 	}
 	return (size);
 }
+

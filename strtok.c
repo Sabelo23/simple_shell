@@ -8,6 +8,7 @@
  *
  * Return: the token's length
  */
+
 int t_strlen(char *str, int pos, char delm)
 {
 	int len = 0;
@@ -27,6 +28,7 @@ int t_strlen(char *str, int pos, char delm)
  *
  * Return: the number of delims
  */
+
 int t_size(char *str, char delm)
 {
 	int i = 0, num_delm = 0;
@@ -53,6 +55,7 @@ int t_size(char *str, char delm)
  *
  * Return: it returns a new string
  */
+
 char *ignore_delm(char *str, char delm)
 {
 	while (*str == delm)
@@ -67,6 +70,7 @@ char *ignore_delm(char *str, char delm)
  *
  * Return: it returns array of tokens
  */
+
 char **_str_tok(char *str, char *delm)
 {
 	int buffsize = 0, p = 0, si = 0, i = 0, len = 0, se = 0, t = 0;
@@ -123,3 +127,4 @@ void free_double_ptr(char **str)
 	}
 	free(str);
 }
+

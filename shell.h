@@ -19,6 +19,7 @@
  * @var: holds environmental variable string
  * @next: points to next node
  */
+
 typedef struct list
 {
 	char *var;

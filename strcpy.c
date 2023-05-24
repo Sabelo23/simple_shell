@@ -27,6 +27,7 @@ char *_strcpy(char *dest, char *src)
  *  @str: The string to duplicate
  *  Return: A pointer to duplicate string in allocted memory
  */
+
 char *_strdup(char *str)
 {
 	char *duplicate_str;
@@ -71,3 +72,4 @@ int _strcmp(char *s1, char *s2)
 	else
 		return (0);
 }
+

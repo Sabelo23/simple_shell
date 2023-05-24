@@ -6,3 +6,4 @@
 4. Thw code that handle the Path, and Fork must note be called if command doesn't exist.[3]
 5. The code that implent the exit built-in, that exit the shell.[4]
 6. The code that implement the env built-in, and prints the current environment.[5]
+

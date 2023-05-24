@@ -1,4 +1,5 @@
 #include "shell.h"
+
 /**
  * _which - a fuction that directs to a PATH directory
  * @str: input string
@@ -6,6 +7,7 @@
  *
  * Return: a PATH to a directory
  */
+
 char *_which(char *str, list_t *env)
 {
 	char *pth, *cat = NULL, **toks;
@@ -44,6 +46,7 @@ char *_which(char *str, list_t *env)
  *
  * Return: the concatenated string
  */
+
 char *_strcat(char *dest, char *src)
 {
 	int len = 0;
@@ -81,6 +84,7 @@ char *_strcat(char *dest, char *src)
  *
  * Return: it returns a linked list
  */
+
 list_t *env_linked_list(char **env)
 {
 	list_t *head;
@@ -102,9 +106,11 @@ list_t *env_linked_list(char **env)
  *
  * Return: 0 on success
  */
+
 int _env(char **str, list_t *env)
 {
 	free_double_ptr(str);
 	print_list(env);
 	return (0);
 }
+

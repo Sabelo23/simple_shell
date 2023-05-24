@@ -7,6 +7,7 @@
  *
  * Return: a concatenated string
  */
+
 char *c_strcat(char *dest, char *src)
 {
 	int len = 0;
@@ -47,6 +48,7 @@ char *c_strcat(char *dest, char *src)
  *
  * Return: 0 on success
  */
+
 int c_setenv(list_t **env, char *name, char *dir)
 {
 	int index = 0, j = 0;
@@ -76,6 +78,7 @@ int c_setenv(list_t **env, char *name, char *dir)
  * @current: input value that bring in cwd
  *
  */
+
 void cd_only(list_t *env, char *current)
 {
 	char *home = NULL;
@@ -102,6 +105,7 @@ void cd_only(list_t *env, char *current)
  *
  * Return: 0 is successful 2 if failed
  */
+
 int cd_execute(list_t *env, char *current, char *dir, char *str, int num)
 {
 	int i = 0;
@@ -170,3 +174,4 @@ int _cd(char **str, list_t *env, int num)
 	free_double_ptr(str);
 	return (exit_stat);
 }
+

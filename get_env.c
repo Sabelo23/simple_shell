@@ -123,6 +123,7 @@ int _unsetenv(list_t **env, char **str)
  *
  * Return: 0 on success, 1 if failed
  */
+
 int _setenv(list_t **env, char **str)
 {
 	int index = 0, j = 0;
@@ -158,3 +159,4 @@ int _setenv(list_t **env, char **str)
 	free_double_ptr(str);
 	return (0);
 }
+

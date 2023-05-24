@@ -1,11 +1,14 @@
 #include "shell.h"
+
 /**
  * ctrl_c - a function that ignores input
  * @n: input value
  */
+
 void ctrl_c(int n)
 {
 	(void)n;
+
 	write(STDOUT_FILENO, "\n$ ", 3);
 }
 
@@ -18,6 +21,7 @@ void ctrl_c(int n)
  *
  * Return: 1 if acted on builtin, 0 if not
  */
+
 int built_int(char **token, list_t *env, int num, char **command)
 {
 	int i = 0;
@@ -58,6 +62,7 @@ int built_int(char **token, list_t *env, int num, char **command)
  *
  * Return: a new string
  */
+
 char *ignore_space(char *str)
 {
 	while (*str == ' ')
@@ -71,6 +76,7 @@ char *ignore_space(char *str)
  * @command: input value
  * @env: environmental variable
  */
+
 void ctrl_D(int i, char *command, list_t *env)
 {
 	if (i == 0)
@@ -89,6 +95,7 @@ void ctrl_D(int i, char *command, list_t *env)
  *
  * Return: 0 on success
  */
+
 int prompt(char **en)
 {
 	list_t *env;
@@ -131,3 +138,4 @@ int prompt(char **en)
 	} while (1);
 	return (exit_stat);
 }
+

@@ -1,4 +1,5 @@
 #include "shell.h"
+
 /**
  * c_exit - frees user's linked list and command before exit
  * @str: input value
@@ -62,13 +63,13 @@ int _execve(char **s, list_t *env, int num)
 	return (0);
 }
 
-
 /**
  * env_linked_list - function that creates linked lists
  * @env: input environmental variables
  *
  * Return: linked list
  */
+
 list_t *env_linked_list(char **env)
 {
 	list_t *head;
@@ -90,9 +91,11 @@ list_t *env_linked_list(char **env)
  *
  * Return: 0 on success
  */
+
 int _env(char **str, list_t *env)
 {
 	free_double_ptr(str);
 	print_list(env);
 	return (0);
 }
+

@@ -8,6 +8,7 @@
  *
  * Return: 0 on success
  */
+
 int main(int ac, char **av, char **env)
 {
 	(void)ac;
@@ -17,3 +18,4 @@ int main(int ac, char **av, char **env)
 
 	return (0);
 }
+

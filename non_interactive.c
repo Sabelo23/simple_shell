@@ -6,6 +6,7 @@
  *
  * Return: it returns a new string
  */
+
 char *c_ignore(char *str)
 {
 	while (*str == ' ' || *str == '\n')
@@ -18,6 +19,7 @@ char *c_ignore(char *str)
  * @env: environmental variables
  *
  */
+
 void non_interactive(list_t *env)
 {
 	size_t i = 0, n = 0;
@@ -54,3 +56,4 @@ void non_interactive(list_t *env)
 	free_linked_list(env);
 	exit(exit_stat);
 }
+
