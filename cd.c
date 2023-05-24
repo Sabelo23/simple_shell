@@ -19,6 +19,11 @@ char *c_strcat(char *dest, char *src)
 		len++;
 		total_len++;
 	}
+	while (src[len2] != '\0')
+	{
+		len2++;
+		total_len++;
+	}
 
 	dest = _realloc(dest, len, sizeof(char) * total_len + 1);
 

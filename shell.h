@@ -1,5 +1,5 @@
-#ifndef SIMPLE_SHELL
-#define SIMPLE_SHELL
+#ifndef SHELL
+#define SHELL
 
 
 #include <stdlib.h>
@@ -25,6 +25,7 @@ typedef struct list
 	struct list *next;
 
 } list_t;
+
 size_t get_line(char **str);
 void free_double_ptr(char **str);
 void free_linked_list(list_t *list);
@@ -58,4 +59,6 @@ char *int_to_string(int num);
 int built_in(char **token, list_t *env, int num, char **command);
 int delete_nodeint_at_index(list_t **head, int index);
 int _execve(char *argv[], list_t *env, int num);
+void not_found(char *str, int num, list_t *env);
+
 #endif
