@@ -101,7 +101,7 @@ void *_realloc(void *ptr, unsigned int old_size, unsigned int new_size)
 
 size_t get_line(char **str)
 {
-	size_t i = 0, size = 0, t = 0, t2 = 0, n = 0;
+	ssize_t i = 0, size = 0, t = 0, t2 = 0, n = 0;
 	char buff[1024];
 
 	while (t2 == 0 && (i = read(STDIN_FILENO, buff, 1024 - 1)))
@@ -119,7 +119,6 @@ size_t get_line(char **str)
 			n++;
 		}
 		if (t == 0)
-
 		{
 			i++;
 			*str = malloc(sizeof(char) * i);
