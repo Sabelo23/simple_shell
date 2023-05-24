@@ -37,9 +37,7 @@ int _setenv(list_t **env, char **str);
 int _env(char **str, list_t *env);
 list_t *env_linked_list(char **env);
 void *_realloc(void *ptr, unsigned int old_size, unsigned int new_size);
-int c_atoi(char *s);
 int __exit(char **str, list_t *env, int num, char **command);
-size_t get_line(char **str);
 char *_strcat(char *dest, char *src);
 char *_strcpy(char *dest, char *src);
 char *_strdup(char *str);
@@ -57,4 +55,6 @@ char *ignore_space(char *str);
 void illegal_number(char *str, int c_n, list_t *env);
 int prompt(char **env);
 char *int_to_string(int num);
+int built_in(char **token, list_t *env, int num, char **command);
+int delete_nodeint_at_index(list_t **head, int index);
 #endif
