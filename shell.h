@@ -11,6 +11,9 @@
 #include <sys/wait.h>
 #include <wait.h>
 #include <fcntl.h>
+#include <dirent.h>
+#include <signal.h>
+
 /**
  * struct list - linked list for environmental variables
  * @var: holds environmental variable string
@@ -22,7 +25,7 @@ typedef struct list
 	struct list *next;
 
 } list_t;
-
+size_t get_line(char **str);
 void free_double_ptr(char **str);
 void free_linked_list(list_t *list);
 void not_found(char *str, int num, list_t *env);
@@ -45,6 +48,9 @@ int _strcmp(char *s1, char *s2);
 int c_t_size(char *str, char delm);
 int _cd(char **str, list_t *env, int num);
 void non_interactive(list_t *env);
-char **_str_tok(char *str, char *delm)
+char **_str_tok(char *str, char *delm);
+char **c_str_tok(char *str, char *delm);
+list_t *add_end_node(list_t **head, char *str);
+size_t print_list(list_t *h);
 
 #endif
