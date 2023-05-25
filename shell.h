@@ -13,7 +13,7 @@
 #include <fcntl.h>
 #include <dirent.h>
 #include <signal.h>
-
+#include "shell.h"
 /**
  * struct list - linked list for environmental variables
  * @var: holds environmental variable string
