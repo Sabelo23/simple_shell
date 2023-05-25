@@ -1,4 +1,5 @@
 #include <stdio.h>
+#include "shell.h"
 
 
 /**
@@ -6,8 +7,8 @@
  *
  * Return: no return
  */
-int main(void)
+void main(void)
 {
 	printf("Hello Simple Shell.\n");
-	return (0);
+
 }

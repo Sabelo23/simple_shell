@@ -67,5 +67,4 @@ list_t *add_end_node(list_t **head, char *str);
 void free_linked_list(list_t *list);
 void main(void);
 
-
 #endif
