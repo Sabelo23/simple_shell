@@ -65,6 +65,5 @@ char *int_to_string(int num);
 size_t print_list(list_t *h);
 list_t *add_end_node(list_t **head, char *str);
 void free_linked_list(list_t *list);
-void main(void);
 
 #endif
