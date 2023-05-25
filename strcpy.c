@@ -22,10 +22,9 @@ char *_strcpy(char *dest, char *src)
 }
 
 /**
- * _strdup - Function that return a pointer to newly allocated space in memory
- * -that contains a copy of the string given as a parameter
- *  @str: The string to duplicate
- *  Return: A pointer to duplicate string in allocted memory
+ * _strdup - Function that return a pointer to new space
+ * @str: The string to duplicate
+ * Return: A pointer to duplicate string in allocted memory
  */
 
 char *_strdup(char *str)
@@ -65,11 +64,10 @@ int _strcmp(char *s1, char *s2)
 	int i = 0;
 
 	while (*(s1 + i) == *(s2 + i) && *(s1 + i))
-	i++;
-	if (*(s2 + i))
+		i++;
 
-	return (*(s2 + i) - *(s2 + i));
+	if (*(s2 + i))
+		return (*(s2 + i) - *(s2 + i));
 	else
 		return (0);
 }
-
