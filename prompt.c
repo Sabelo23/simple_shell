@@ -13,7 +13,7 @@ void ctrl_c(int n)
 }
 
 /**
- * built_int - a function that handles builtins
+ * built_in - a function that handles builtins
  * @token: input value
  * @env: environmental variable
  * @num: input value
