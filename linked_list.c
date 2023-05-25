@@ -51,7 +51,7 @@ list_t *add_end_node(list_t **head, char *str)
 		return (NULL);
 	new = malloc(sizeof(list_t));
 	if (new == NULL)
-			return (NULL);
+		return (NULL);
 	holder = *head;
 	if (holder != NULL)
 	{
@@ -124,4 +124,3 @@ void free_linked_list(list_t *list)
 	}
 
 }
-
