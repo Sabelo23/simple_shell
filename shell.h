@@ -63,5 +63,9 @@ int _execve(char *argv[], list_t *env, int num);
 void not_found(char *str, int num, list_t *env);
 int numlen(int n);
 char *int_to_string(int number);
+size_t print_list(list_t *h);
+list_t *add_end_node(list_t **head, char *str);
+int delete_nodeint_at_index(list_t **head, int index);
+void free_linked_list(list_t *list);
 
 #endif
