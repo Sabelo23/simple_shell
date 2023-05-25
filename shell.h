@@ -61,7 +61,6 @@ int built_in(char **token, list_t *env, int num, char **command);
 int delete_nodeint_at_index(list_t **head, int index);
 int _execve(char *argv[], list_t *env, int num);
 int numlen(int n);
-char *int_to_string(int num);
 size_t print_list(list_t *h);
 list_t *add_end_node(list_t **head, char *str);
 void free_linked_list(list_t *list);
