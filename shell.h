@@ -13,7 +13,7 @@
 #include <fcntl.h>
 #include <dirent.h>
 #include <signal.h>
-#include "shell.h"
+
 /**
  * struct list - linked list for environmental variables
  * @var: holds environmental variable string
@@ -50,19 +50,15 @@ char **_str_tok(char *str, char *delm);
 char **c_str_tok(char *str, char *delm);
 list_t *add_end_node(list_t **head, char *str);
 size_t print_list(list_t *h);
-void not_found(char *str, int num, list_t *env);
 void cant_cd_to(char *str, int c_n, list_t *env);
 int t_strlen(char *str, int pos, char delm);
 char *ignore_space(char *str);
-int prompt(char **en);
+int prompt(char **env);
 char *int_to_string(int num);
 void illegal_number(char *str, int c_n, list_t *env);
 int built_in(char **token, list_t *env, int num, char **command);
 int delete_nodeint_at_index(list_t **head, int index);
 int _execve(char *argv[], list_t *env, int num);
-int numlen(int n);
-size_t print_list(list_t *h);
-list_t *add_end_node(list_t **head, char *str);
-void free_linked_list(list_t *list);
+
 
 #endif

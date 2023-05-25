@@ -5,7 +5,7 @@
  * @ac: It an argument count
  * @av: it an argument vectors
  * @env: it an environmental variables
- * Return: Zere if successful
+ * Return: Zero if successful
  */
 
 int main(int ac, char **av, char **env)

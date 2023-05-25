@@ -138,4 +138,3 @@ int prompt(char **en)
 	} while (1);
 	return (exit_stat);
 }
-
