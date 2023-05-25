@@ -22,7 +22,7 @@ int numlen(int n)
 /**
  * int_to_string - The function that turns an int into a string
  * @number: The int
- * Returns: return the int as a string and NULL if it failed
+ * Return: return the int as a string and NULL if it failed
  */
 
 char *int_to_string(int number)
