@@ -13,13 +13,11 @@ int c_atoi(char *s)
 
 	while (s[i] != '\0')
 	{
-	if (s[i] >= '0' && s[i] <= '9')
-		num = num * 10 + (s[1] - '0');
-
-	if (s[i] > '9' || s[i] < '0')
-
-	return (-1);
-	i++;
+		if (s[i] >= '0' && s[i] <= '9')
+			num = num * 10 + (s[1] - '0');
+		if (s[i] > '9' || s[i] < '0')
+			return (-1);
+		i++;
 	}
 	return (num);
 }

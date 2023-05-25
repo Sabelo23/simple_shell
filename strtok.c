@@ -122,9 +122,8 @@ void free_double_ptr(char **str)
 
 	while (str[i] != NULL)
 	{
-	free(str[i]);
-	i++;
+		free(str[i]);
+		i++;
 	}
 	free(str);
 }
-
