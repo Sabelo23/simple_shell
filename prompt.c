@@ -22,7 +22,7 @@ void ctrl_c(int n)
  * Return: 1 if acted on builtin, 0 if not
  */
 
-int built_int(char **token, list_t *env, int num, char **command)
+int built_in(char **token, list_t *env, int num, char **command)
 {
 	int i = 0;
 

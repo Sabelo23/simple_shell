@@ -139,7 +139,8 @@ int cd_execute(list_t *env, char *current, char *dir, char *str, int num)
  */
 int _cd(char **str, list_t *env, int num)
 {
-	char *current = NULL, *dir = NULL;
+	char *current = NULL;
+	char *dir = NULL;
 	int exit_stat = 0;
 
 	current = getcwd(current, 0);

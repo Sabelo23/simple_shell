@@ -66,4 +66,3 @@ char *int_to_string(int number)
 	res[i] = '\0';
 	return (res);
 }
-
