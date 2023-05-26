@@ -174,3 +174,4 @@ int _cd(char **str, list_t *env, int num)
 	free_double_ptr(str);
 	return (exit_stat);
 }
+

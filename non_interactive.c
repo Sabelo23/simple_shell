@@ -56,3 +56,4 @@ void non_interactive(list_t *env)
 	free_linked_list(env);
 	exit(exit_stat);
 }
+

@@ -113,3 +113,4 @@ int _env(char **str, list_t *env)
 	print_list(env);
 	return (0);
 }
+
