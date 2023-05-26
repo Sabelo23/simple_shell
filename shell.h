@@ -13,6 +13,7 @@
 #include <fcntl.h>
 #include <dirent.h>
 #include <signal.h>
+#include "shell.h"
 
 /**
  * struct list - linked list for environmental variables
@@ -73,5 +74,5 @@ char *_which(char *str, list_t *env);
 char *_strcat(char *dest, char *src);
 list_t *env_linked_list(char **env);
 int _env(char **str, list_t *env);
-int main(void);
+
 #endif
