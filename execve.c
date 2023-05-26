@@ -62,4 +62,3 @@ int _execve(char **s, list_t *env, int num)
 	}
 	return (0);
 }
-

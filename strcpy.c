@@ -1,11 +1,10 @@
 #include "shell.h"
 
 /**
- * _strcpy - It copy the string pointed to by src including the terminating
- * -NULL byte 0 to the buffer pointed to by dest
- *  @dest: It copy the source to the buffer
- *  @src: The source to copy
- *  Return: The copy of the origin source
+ * _strcpy - a function that copies the string pointed to src.
+ * @dest: It copies the source to the buffer
+ * @src: The source to copy
+ * Return: The copy of the origin source
  */
 
 char *_strcpy(char *dest, char *src)
@@ -22,9 +21,9 @@ char *_strcpy(char *dest, char *src)
 }
 
 /**
- * _strdup - Function that return a pointer to new space
+ * _strdup - a Function that return a pointer to new space
  * @str: The string to duplicate
- * Return: A pointer to duplicate string in allocted memory
+ * Return: A pointer to duplicated string
  */
 
 char *_strdup(char *str)
@@ -33,7 +32,7 @@ char *_strdup(char *str)
 	int i, len = 0;
 
 	if (str == NULL)
-	return (NULL);
+		return (NULL);
 
 	while (*(str + len))
 		len++;
@@ -56,7 +55,7 @@ char *_strdup(char *str)
  * _strcmp - A function that compare two strings
  * @s1: Pointer at string 1
  * @s2: Pointer at string 2
- * Return: A int that tells num spaces in between 0 if exactly the same string
+ * Return: an int, 0 if same string
  */
 
 int _strcmp(char *s1, char *s2)

@@ -139,14 +139,13 @@ int cd_execute(list_t *env, char *current, char *dir, char *str, int num)
  */
 int _cd(char **str, list_t *env, int num)
 {
-	char *current = NULL;
-	char *dir = NULL;
+	char *current = NULL, *dir = NULL;
 	int exit_stat = 0;
 
 	current = getcwd(current, 0);
 	if (str[1] != NULL)
 	{
-		if (str[1][0] == '-')
+		if (str[1][0] == '~')
 		{
 			dir = get_env("HOME", env);
 			dir = c_strcat(dir, str[1]);
@@ -175,4 +174,3 @@ int _cd(char **str, list_t *env, int num)
 	free_double_ptr(str);
 	return (exit_stat);
 }
-

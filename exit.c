@@ -1,7 +1,7 @@
 #include "shell.h"
 
 /**
- * c_atoi - Funtion that make atoi coverts string to int
+ * c_atoi - Funtion that make atoi coverts a string to int
  * @s: Pointing at the string
  * Return: A number if successful or -1 if not successful, not a number.
  */
@@ -14,7 +14,7 @@ int c_atoi(char *s)
 	while (s[i] != '\0')
 	{
 		if (s[i] >= '0' && s[i] <= '9')
-			num = num * 10 + (s[1] - '0');
+			num = num * 10 + (s[i] - '0');
 		if (s[i] > '9' || s[i] < '0')
 			return (-1);
 		i++;
@@ -26,7 +26,7 @@ int c_atoi(char *s)
  * __exit - a function that frees user input and exits main program
  * @str: A command from the user on shell
  * @env: An environmental variable to free error
- * @num: A nth user command line input to print in error msg
+ * @num: input value
  * @command: An command to free
  * Return: It will return 0 if successful or 2 if not successful
  */
@@ -53,10 +53,10 @@ int __exit(char **str, list_t *env, int num, char **command)
 
 /**
  * _realloc - The function that allocate memory and make all values to 0
- * @ptr: A pointer to the memory that previously allocated (malloc(old_size))
+ * @ptr:input value
  * @old_size: A size that is previously allocated
  * @new_size: A new size to re-allocate
- * Return: A pointer to re-alloate memory
+ * Return: A pointer
  */
 
 void *_realloc(void *ptr, unsigned int old_size, unsigned int new_size)
@@ -93,9 +93,9 @@ void *_realloc(void *ptr, unsigned int old_size, unsigned int new_size)
 }
 
 /**
- * get_line - It stores into malloced buffer the user's command into shell
+ * get_line - a function that stores into malloced buffer
  * @str: Pointer to a buffer
- * Return: A number of charaters read
+ * Return: A number of charaters
  */
 
 size_t get_line(char **str)
@@ -133,4 +133,3 @@ size_t get_line(char **str)
 	}
 	return (size);
 }
-

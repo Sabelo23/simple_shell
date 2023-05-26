@@ -159,4 +159,3 @@ int _setenv(list_t **env, char **str)
 	free_double_ptr(str);
 	return (0);
 }
-

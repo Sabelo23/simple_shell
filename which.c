@@ -65,7 +65,6 @@ char *_strcat(char *dest, char *src)
 		total_len++;
 	}
 
-
 	dest = _realloc(dest, len, sizeof(char) * total_len + 1);
 
 	while (src[j] != '\0')
@@ -114,4 +113,3 @@ int _env(char **str, list_t *env)
 	print_list(env);
 	return (0);
 }
-

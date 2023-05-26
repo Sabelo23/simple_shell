@@ -112,7 +112,7 @@ int delete_nodeint_at_index(list_t **head, int index)
 }
 
 /**
- * free_linked_list - frees linked list
+ * free_linked_list - a function that frees linked list
  * @list: linked list
  */
 void free_linked_list(list_t *list)
@@ -128,4 +128,3 @@ void free_linked_list(list_t *list)
 	}
 
 }
-
