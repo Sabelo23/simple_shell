@@ -1,4 +1,5 @@
 #include "shell.h"
+#include <stdio.h>
 
 /**
  * main - A function that creates simple shell
